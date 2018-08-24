@@ -28,3 +28,6 @@ Route::match(['get','post'],'foo',function(){
 Route::any('bar',function(){
     return 'any';
 });
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
