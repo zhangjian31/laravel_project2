@@ -14,3 +14,17 @@
 Route::get('/', function () {
     return view('welcome');
 });
+Route::get('hello', function()
+{
+    return 'hello，Welcome to my laravel!';
+});
+
+Route::get('users', 'UserController@getIndex');
+
+Route::match(['get','post'],'foo',function(){
+    return 'match';
+});
+
+Route::any('bar',function(){
+    return 'any';
+});
